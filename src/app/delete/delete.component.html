@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="deleteTodo()">
+    <label for="todoId">Todo ID:</label>
+    <input type="number" formControlName="todoId" id="todoId">
+    <button type="submit">Delete Todo</button>
+  </form>
+  
+  <div *ngIf="deletionMessage">
+    <p>{{ deletionMessage }}</p>
+  </div>
+  

@@ -1,0 +1,24 @@
+<div class="top">
+    <button (click)="showTasks()">Show Todos</button>
+    <input type="number" placeholder="Enter User ID" [(ngModel)]="userInputId" name="userId">
+    <button (click)="search()">Search</button>
+  </div>
+  
+  <div *ngIf="tasksDetails.length > 0">
+    <h2>All Todos</h2>
+    <ul class="card-list">
+      <li *ngFor="let task of tasksDetails" class="card">
+        <div class="card-content">
+          <p>User ID: {{ task.userId }}</p>
+          <p>ID: {{ task.id }}</p>
+          <p>Title: {{ task.title }}</p>
+          <p>Completed: {{ task.completed }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="tasksDetails.length === 0 && userInputId !== undefined">
+    <p>No Todos found for User ID: {{ userInputId }}</p>
+  </div>
+  

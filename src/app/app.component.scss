@@ -1,0 +1,20 @@
+.nav {
+    background-color: #b0ff93; 
+    padding: 10px; 
+   
+  }
+  
+  .nav a {
+    color: #000000; 
+    text-decoration: none; 
+    padding: 8px 12px; 
+    margin-right: 10px; 
+  
+    transition: background-color 0.3s ease; 
+  }
+  
+  .nav a:hover {
+    background-color: #ffffff; 
+    color: #000000;
+  }
+  

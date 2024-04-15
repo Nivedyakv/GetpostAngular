@@ -1,0 +1,81 @@
+/* SCSS */
+.top{
+    margin-top: 30px;
+}
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 350px;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.333% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card:hover {
+    background-color: #eaeaea;
+  }
+  
+  .card-content {
+    
+    p {
+      margin: 5px 0; 
+      font-size: 16px;
+      color: #333; 
+    }
+  
+    
+    p.userId {
+      font-weight: bold; 
+    }
+  
+    p.completed {
+      color: #4caf50; 
+    }
+  }
+  
+  
+  @for $i from 1 through 10 {
+    .card:nth-child(#{$i}) {
+      $hue: $i * 36;
+      background-color: hsl($hue, 70%, 80%);
+    }
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+  }
+ 
+input{
+    margin-left: 70px;
+    width: auto;
+    height: 30px;
+}
+button {
+    font-size: 18px; 
+    padding: 10px 20px;
+    border-radius: 5px; 
+    background-color: #4caf50; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+   
+   
+  }
+  
+  button:hover {
+    background-color: #45a049; 
+  }
+  h2{
+    text-align: center;
+    color: #45a049;
+  }
