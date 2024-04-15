@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/",
+    "/delete",
+    "/form",
+    "/patch",
+    "/update"
+  ]
+}
